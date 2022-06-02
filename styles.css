@@ -673,6 +673,9 @@ li {
       margin-left: 10px;
       font-size: 16px;
       color: #BFC500; }
+    .teamDataContainer .teamContactAdress a:hover {
+      color: #FFF;
+      transition: all linear .3s; }
     .teamDataContainer .teamContactAdress h2 {
       display: flex;
       justify-content: center;
@@ -684,3 +687,70 @@ li {
       color: #FFF; }
 
 /* End team sec */
+/* footerSec */
+.footerContent {
+  padding: 10px 80px 80px 80px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr); }
+  .footerContent .footerLogo img {
+    width: 200px;
+    height: 200px; }
+  .footerContent .footerEmailInput h2 {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 34px;
+    font-weight: 800;
+    color: #FFF; }
+  .footerContent .footerEmailInput .footerEmailInputForm {
+    margin-top: 5px;
+    display: flex;
+    gap: 0; }
+    .footerContent .footerEmailInput .footerEmailInputForm input {
+      border: none;
+      background-color: #272626;
+      width: 233px;
+      height: 27px; }
+    .footerContent .footerEmailInput .footerEmailInputForm input::placeholder {
+      color: #dadada;
+      font-size: 10px;
+      font-style: italic;
+      font-weight: 100;
+      padding-left: 10px; }
+    .footerContent .footerEmailInput .footerEmailInputForm button {
+      width: 36px;
+      height: 27px;
+      border: none;
+      background-color: #4B4A4A; }
+  .footerContent .footerSocialMediaInfo {
+    display: flex;
+    flex-direction: column; }
+    .footerContent .footerSocialMediaInfo span {
+      color: #FFF;
+      font-size: 10px;
+      justify-content: right;
+      text-align: right;
+      margin-bottom: 4px; }
+    .footerContent .footerSocialMediaInfo a {
+      font-size: 10px;
+      color: #BFC500;
+      justify-content: right;
+      text-align: right; }
+    .footerContent .footerSocialMediaInfo a:hover {
+      color: #FFF; }
+    .footerContent .footerSocialMediaInfo .socialMedia {
+      display: flex;
+      justify-content: right;
+      text-align: right;
+      margin-bottom: 20px;
+      gap: 1.5rem; }
+      .footerContent .footerSocialMediaInfo .socialMedia a {
+        color: #FFF;
+        text-decoration: none;
+        text-align: center; }
+        .footerContent .footerSocialMediaInfo .socialMedia a i {
+          font-size: .9rem; }
+      .footerContent .footerSocialMediaInfo .socialMedia a:hover {
+        color: #BFC500; }
+
+/* EndfooterSec */
