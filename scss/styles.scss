@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,500;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    color: black;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.color{
+    color: #BFC500;
+}
+/* Header */
+@import "./header.scss";
+/* Fin del header */
+
+/* Hero img */
+@import "./hero.scss";
+/* Fin hero img */
+
+/* About data */
+@import "./aboutData.scss";
+/* Fin about data */
+
+/* Banner inicio */
+@import "./banner.scss";
+/* Banner final */
+
+/* specs */
+@import "./specs.scss";
+/* specs final */
+
+/* Welcome to the club section */
+@import "./welcome.scss";
+/* Welcome to the club section end */
+
+/* Bath sec */
+@import "./bathroom.scss";
+/* End bath sec */
+
+/* Roadmap sec */
+@import "./roadmap.scss";
+/* Roadmap sec end*/
+
+/* Comunity tools sec */
+@import "./comunity.scss";
+/* End comu tools */
+
+/* Team sec */
+@import "./team.scss";
+/* End team sec */

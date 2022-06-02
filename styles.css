@@ -1,0 +1,686 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,500;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; }
+
+body {
+  color: black;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.color {
+  color: #BFC500; }
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  padding: 0.5rem 1rem;
+  z-index: 999;
+  background-color: black; }
+  header .headerLogo {
+    width: 220px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px; }
+    header .headerLogo img {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      width: 194px;
+      height: 75px; }
+  header .header__burguerMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    border: none;
+    color: #FFFFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in; }
+  header input#menu {
+    display: none; }
+  header button.header__burguerMenu:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  header input#menu:checked ~ .header__menu {
+    display: block; }
+  header .header__menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    margin-left: 140px;
+    width: 100%;
+    height: 100%; }
+    header .header__menu .header__closeMenu {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem; }
+    header .header__menu ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      gap: 2rem;
+      margin-left: 80px; }
+      header .header__menu ul li {
+        font-weight: 600;
+        padding: 0.5rem;
+        gap: 2rem; }
+        header .header__menu ul li a {
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          font-style: italic;
+          font-weight: 500;
+          font-size: 9px;
+          line-height: 12px;
+          color: #FFFFFF;
+          text-transform: uppercase; }
+        header .header__menu ul li a:hover {
+          color: #BFC500;
+          transition: all linear .3s; }
+    header .header__menu #header__menu--itemGallery ul {
+      flex-direction: column;
+      list-style: none;
+      background-color: #000;
+      padding: 2px;
+      left: -5rem;
+      gap: 5px; }
+    header .header__menu #header__menu--itemGallery ul
+li {
+      padding: 2px;
+      width: 100%;
+      z-index: 1000; }
+    header .header__menu a {
+      font-style: italic;
+      font-family: 'Montserrat', sans-serif;
+      width: 50%;
+      font-weight: 10;
+      font-size: 7px;
+      line-height: 12px;
+      color: #FFFFFF;
+      text-decoration: none; }
+    header .header__menu .socialMedia {
+      display: flex;
+      gap: 1rem;
+      margin-right: 100px;
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
+      header .header__menu .socialMedia a {
+        color: #FFFFFF;
+        display: flex;
+        font-size: 15px;
+        text-align: center;
+        justify-content: center;
+        align-items: center; }
+      header .header__menu .socialMedia a:hover {
+        color: #BFC500;
+        transition: all linear .3s; }
+
+/* Medias queries */
+@media screen and (min-width: 768px) {
+  header .header__burguerMenu {
+    display: none; }
+  header .header__menu .header__closeMenu {
+    display: none; }
+  header .header__menu {
+    display: flex;
+    position: inherit; }
+  header .header__menu ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none; }
+  header #header__menu--itemGallery {
+    position: relative; }
+  header #header__menu--itemGallery:hover > ul {
+    display: flex; }
+  header #header__menu--itemGallery ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    height: 7rem;
+    background-color: #fafafa;
+    border-radius: 5px; } }
+
+@media screen and (max-width: 660px) {
+  header .header__menu ul {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 60px;
+    margin-top: 60px;
+    list-style: none; }
+  header .header__menu .header__closeMenu {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 4px;
+    margin-top: 10px; }
+  header #header__menu--itemGallery ul {
+    position: relative;
+    line-height: 10px;
+    justify-content: center;
+    bottom: 50px;
+    right: 50px;
+    list-style: circle; }
+  header #header__menu--itemGallery ul li {
+    color: #7C3AED; } }
+
+/* Fin del header */
+/* Hero img */
+.heroContainer {
+  width: 100%; }
+  .heroContainer .heroContent img {
+    width: 100%;
+    padding: 0px 50px 50px 50px; }
+
+/* Fin hero img */
+/* About data */
+.dataContainer {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 2rem;
+  padding: 0px 100px 100px 100px; }
+  .dataContainer .apeDataText h1 {
+    font-size: 28px;
+    font-style: italic;
+    line-height: 34px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: #FFF; }
+  .dataContainer .apeDataText span {
+    font-size: 17px;
+    line-height: 24px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #FFF; }
+  .dataContainer .apeDataText h2 {
+    margin-top: 170px;
+    font-style: italic;
+    font-weight: 500;
+    color: #BFC500;
+    font-size: 25px; }
+  .dataContainer .apeDataText h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #FFF; }
+  .dataContainer .apeDataInfo span {
+    color: #FFF;
+    font-size: 13px;
+    line-height: 19px;
+    font-style: italic;
+    font-weight: 200;
+    margin-top: 60px; }
+  .dataContainer .apeDataInfo .apeDesign {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 23rem;
+    height: 23rem;
+    margin-left: 40px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 50px; }
+    .dataContainer .apeDataInfo .apeDesign img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; }
+
+/* Fin about data */
+/* Banner inicio */
+.bannerContainer {
+  background-color: black; }
+  .bannerContainer .bannerContent {
+    background-color: #BFC500;
+    padding: 27px;
+    margin: 10px 100px 80px 100px;
+    display: flex;
+    gap: 2rem; }
+    .bannerContainer .bannerContent h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 800;
+      width: 33%; }
+    .bannerContainer .bannerContent h4 {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 17px;
+      letter-spacing: .5px;
+      font-style: normal;
+      font-weight: 400;
+      text-align: left; }
+    .bannerContainer .bannerContent button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 100px;
+      border-radius: 1rem;
+      border: none;
+      background-color: black;
+      padding: 20px 40px 20px 40px;
+      cursor: pointer; }
+      .bannerContainer .bannerContent button a {
+        color: #BFC500;
+        text-decoration: none;
+        width: 70%;
+        font-weight: 700; }
+    .bannerContainer .bannerContent button:hover {
+      background-color: #FFF;
+      transition: all .3s; }
+      .bannerContainer .bannerContent button:hover a {
+        color: black;
+        transition: all .3s; }
+
+.line hr {
+  height: 1px;
+  background-color: #e9e9e9;
+  border: 0;
+  margin-left: 100px;
+  margin-right: 100px;
+  top: 20px; }
+
+/* Banner final */
+/* specs */
+.specsDataContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem; }
+  .specsDataContainer .specsDataText {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    text-align: left;
+    gap: .5rem;
+    margin-top: 70px; }
+    .specsDataContainer .specsDataText h2 {
+      color: #FFF;
+      font-style: italic;
+      font-weight: 800;
+      margin: 0 0 30px;
+      font-size: 27px;
+      line-height: 32px; }
+    .specsDataContainer .specsDataText span {
+      color: #FFF;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500; }
+      .specsDataContainer .specsDataText span a {
+        color: #BFC500;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500; }
+      .specsDataContainer .specsDataText span a:hover {
+        color: #FFF; }
+  .specsDataContainer .specsDataGif {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-right: 40px;
+    width: 27rem;
+    height: 27rem; }
+    .specsDataContainer .specsDataGif img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; }
+
+/* specs final */
+/* Welcome to the club section */
+.welcomeDataContainer .welcomeDataText h2 {
+  color: #FFF;
+  font-style: italic;
+  font-weight: 800;
+  margin: 20px 0 10px 100px;
+  font-size: 27px;
+  line-height: 32px; }
+
+.welcomeDataContainer .welcomeDataText span {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-left: 100px;
+  width: 65%; }
+
+.welcomeDataContainer .iconsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 1122px;
+  height: 271px;
+  margin-left: 100px;
+  margin-top: 50px; }
+  .welcomeDataContainer .iconsContainer p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    width: 100%; }
+  .welcomeDataContainer .iconsContainer .icon1 {
+    width: 157px;
+    height: 271px;
+    justify-content: center;
+    align-items: center; }
+    .welcomeDataContainer .iconsContainer .icon1 img {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100px;
+      height: 149;
+      margin-left: 20px; }
+  .welcomeDataContainer .iconsContainer .icon2 {
+    width: 157px;
+    height: 271px;
+    justify-content: center;
+    align-items: center; }
+    .welcomeDataContainer .iconsContainer .icon2 img {
+      width: 100px;
+      height: 121px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+      margin-top: 15px; }
+    .welcomeDataContainer .iconsContainer .icon2 p {
+      margin-top: 11px; }
+  .welcomeDataContainer .iconsContainer .icon3 {
+    width: 157px;
+    height: 271px;
+    justify-content: center;
+    align-items: center; }
+    .welcomeDataContainer .iconsContainer .icon3 img {
+      width: 100px;
+      height: 123px;
+      margin-top: 15px;
+      margin-left: 20px; }
+    .welcomeDataContainer .iconsContainer .icon3 p {
+      margin-top: 7px; }
+  .welcomeDataContainer .iconsContainer .icon4 {
+    width: 157px;
+    height: 271px;
+    justify-content: center;
+    align-items: center; }
+    .welcomeDataContainer .iconsContainer .icon4 img {
+      width: 100px;
+      height: 141px;
+      margin-left: 20px; }
+    .welcomeDataContainer .iconsContainer .icon4 p {
+      margin-top: 2px; }
+  .welcomeDataContainer .iconsContainer .icon5 {
+    width: 157px;
+    height: 271px;
+    justify-content: center;
+    align-items: center; }
+    .welcomeDataContainer .iconsContainer .icon5 img {
+      width: 100px;
+      height: 109px;
+      margin-left: 20px; }
+    .welcomeDataContainer .iconsContainer .icon5 p {
+      margin-top: 30px; }
+
+/* Welcome to the club section end */
+/* Bath sec */
+.bathContainer {
+  display: grid;
+  grid-template-columns: 9fr 1fr; }
+  .bathContainer .bathText {
+    padding-left: 100px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: .3rem;
+    width: 100%; }
+    .bathContainer .bathText h2 {
+      color: #FFF;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 27px;
+      line-height: 32px;
+      margin-bottom: 20px; }
+    .bathContainer .bathText span {
+      color: #FFF;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500; }
+  .bathContainer .bathIcon {
+    margin-right: 100px;
+    height: 300px;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: 20px; }
+    .bathContainer .bathIcon img {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 163px;
+      margin-left: 65px; }
+
+/* End bath sec */
+/* Roadmap sec */
+.roadmapSec {
+  width: 1143px;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  text-align: left;
+  gap: .5rem;
+  margin-top: 40px;
+  margin-bottom: 70px; }
+  .roadmapSec span {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+    width: 90%; }
+  .roadmapSec h2 {
+    color: #fff;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 32px; }
+  .roadmapSec .roadContainer {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    gap: 2rem;
+    margin-top: 20px;
+    margin-bottom: 150px; }
+    .roadmapSec .roadContainer .roadText {
+      display: flex;
+      flex-direction: column; }
+      .roadmapSec .roadContainer .roadText .color {
+        color: #BFC500;
+        font-size: 16px; }
+      .roadmapSec .roadContainer .roadText span {
+        color: #FFF;
+        font-size: 12px;
+        line-height: 24px;
+        font-weight: 500;
+        width: 100%; }
+      .roadmapSec .roadContainer .roadText del {
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+        margin-bottom: 5px;
+        margin-top: -23px; }
+    .roadmapSec .roadContainer .roadMerch {
+      width: 300px;
+      height: 300px;
+      background-color: #BFC500;
+      margin-top: 55px; }
+      .roadmapSec .roadContainer .roadMerch img {
+        width: 350px;
+        height: 350px;
+        margin-left: -5px; }
+
+/* Roadmap sec end*/
+/* Comunity tools sec */
+.comunityContainer {
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  width: 1143px;
+  margin-left: 100px;
+  padding-top: 30px;
+  margin-bottom: 30px; }
+  .comunityContainer .comText h2 {
+    color: #fff;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 27px;
+    line-height: 32px; }
+  .comunityContainer .comText p {
+    color: #FFF;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+    width: 90%; }
+  .comunityContainer .comBtns {
+    display: flex;
+    flex-direction: column;
+    margin-right: 90px;
+    width: 250px;
+    height: 150px;
+    cursor: pointer; }
+    .comunityContainer .comBtns button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 200px;
+      margin-top: 20px;
+      border-radius: .5rem;
+      border: none;
+      background-color: #BFC500;
+      cursor: pointer; }
+      .comunityContainer .comBtns button a {
+        color: black;
+        text-decoration: none;
+        width: 70%;
+        font-weight: 700;
+        font-style: bold;
+        text-transform: uppercase;
+        font-size: 16px; }
+    .comunityContainer .comBtns button:hover {
+      background-color: #FFF;
+      transition: all .3s; }
+      .comunityContainer .comBtns button:hover a {
+        color: black;
+        transition: all .3s; }
+
+/* End comu tools */
+/* Team sec */
+.teamDataContainer {
+  width: 1143px;
+  margin-left: 100px;
+  padding-top: 30px;
+  margin-bottom: 10px; }
+  .teamDataContainer .teamDataContent {
+    width: 1143px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 8fr 2fr; }
+    .teamDataContainer .teamDataContent .teamDataText h2 {
+      font-size: 27px;
+      font-style: italic;
+      line-height: 34px;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: #FFF; }
+    .teamDataContainer .teamDataContent .teamDataText p {
+      font-size: 16px;
+      line-height: 24px;
+      font-style: normal;
+      text-align: left;
+      font-weight: 500;
+      color: #FFF;
+      width: 100%;
+      margin-bottom: 30px; }
+    .teamDataContainer .teamDataContent .teamDataText .teamDataTextMembers {
+      display: flex;
+      flex-direction: column; }
+      .teamDataContainer .teamDataContent .teamDataText .teamDataTextMembers span {
+        font-size: 15px;
+        line-height: 24px;
+        font-style: normal;
+        text-align: left;
+        font-weight: 500;
+        margin-bottom: 20px;
+        color: #FFF; }
+      .teamDataContainer .teamDataContent .teamDataText .teamDataTextMembers .color {
+        color: #BFC500; }
+    .teamDataContainer .teamDataContent .teamDataIcons {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      width: 23rem;
+      height: 23rem;
+      margin-left: 50px;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 30px; }
+      .teamDataContainer .teamDataContent .teamDataIcons img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; }
+  .teamDataContainer .teamContactAdress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 20px; }
+    .teamDataContainer .teamContactAdress a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+      font-size: 16px;
+      color: #BFC500; }
+    .teamDataContainer .teamContactAdress h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 34px;
+      font-weight: 800;
+      color: #FFF; }
+
+/* End team sec */
